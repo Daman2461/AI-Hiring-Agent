@@ -2,6 +2,9 @@
 
 A next-generation, end-to-end AI sourcing agent for recruiters, built for the Synapse 25 AI Hackathon.
 
+# VIDEO :
+https://youtu.be/nAz9zWmqn6Q?si=5JHvtVDxbIDjYlLm
+ 
 ## 🚀 Features
 
 - **LinkedIn Sourcing Agent:**
@@ -89,7 +92,7 @@ A next-generation, end-to-end AI sourcing agent for recruiters, built for the Sy
 ## 🖥️ Demo
 
 - Run the Streamlit app and try the "LinkedIn Sourcing Agent" and "AI Chat Assistant" features.
-- For a video demo, see [demo.mp4](demo.mp4) (to be added).
+- For a video demo, see [Link](https://youtu.be/nAz9zWmqn6Q?si=5JHvtVDxbIDjYlLm)
 
 ---
 
