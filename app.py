@@ -3,7 +3,7 @@ import os
 from resume_parser import extract_info
 from ai_chat import answer_question
 from recommender import score_candidate
-from linkedin_agent import find_candidates
+from linkedin_agent import agent_pipeline
 
 st.set_page_config(page_title="AI Hiring Agent", layout="centered")
 st.markdown("""
@@ -31,7 +31,7 @@ if is_hf_space():
     job_desc = st.text_area("Job Description", height=200)
     if st.button("Find Candidates") and job_desc.strip():
         with st.spinner("Searching..."):
-            result = find_candidates(job_desc, num_results=10, top_n=10)
+            result = agent_pipeline(job_desc, num_results=10, top_n=10)
             st.json(result)
 else:
     if page == "LinkedIn Sourcing Agent":
