@@ -1,69 +1,49 @@
 # Synapse AI Hiring Agent
 
-A next-generation AI-powered sourcing agent for recruiters, built for the Synapse 25 AI Hackathon.
+A next-generation, end-to-end AI sourcing agent for recruiters, built for the Synapse 25 AI Hackathon.
 
 ## 🚀 Features
 
-- **LinkedIn Sourcing Agent:**  
-  Paste a job description or job link, and discover top-matching LinkedIn candidates using Bing search, Selenium, and LLM-powered recruiter queries.
-- **Rubric-Based Scoring:**  
-  Each candidate is scored using a transparent rubric (education, trajectory, company, skills, location, tenure).
-- **Personalized Outreach:**  
-  Auto-generates tailored outreach messages for each candidate, highlighting their fit for the job.
-- **AI Chat Assistant:**  
-  Ask any hiring, resume, or job search question. Upload a resume for personalized, context-aware answers.
-- **Modern UI:**  
-  Beautiful Streamlit frontend for demo and real-world use.
-- **FastAPI Backend:**  
-  `/find_candidates` endpoint for programmatic access and HuggingFace Spaces deployment.
+- **LinkedIn Sourcing Agent:**
+  - Paste a job description or job link, and discover top-matching LinkedIn candidates using Bing search, Selenium automation, and LLM-powered recruiter queries.
+- **Transparent, Rubric-Based Scoring:**
+  - Each candidate is scored using a multi-factor rubric (education, trajectory, company, skills, location, tenure) with float-based, LLM-generated breakdowns.
+- **Personalized Outreach:**
+  - Auto-generates tailored outreach messages for each candidate, highlighting their unique fit for the job.
+- **AI Chat Assistant:**
+  - Ask any hiring, resume, or job search question. Upload a resume for personalized, context-aware answers.
+- **Modern, Beautiful UI:**
+  - Streamlit frontend for demo and real-world use, with a focused, intuitive workflow.
+- **API-First, Modular Design:**
+  - FastAPI backend and clean Python modules for easy integration, scaling, and automation.
 
 ---
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/yourusername/synapse-ai-hiring-agent.git
-cd synapse-ai-hiring-agent
-```
-
-### 2. Install Dependencies
-
-We recommend using `conda` or `venv`:
-
-```bash
-# Using pip
-pip install -r requirements.txt
-```
-
-Or, for conda:
-
-```bash
-conda create -n synapse python=3.10
-conda activate synapse
-pip install -r requirements.txt
-```
-
-### 3. Environment Variables
-
-If using API keys (e.g., Mistral), create a `.env` file:
-
-```
-MISTRAL_API_KEY=your_mistral_api_key
-```
-
-### 4. Run the Streamlit App
-
-```bash
-streamlit run app.py
-```
-
-### 5. Run the FastAPI Backend
-
-```bash
-uvicorn main:app --reload
-```
+1. **Clone the Repo**
+   ```bash
+   git clone https://github.com/yourusername/synapse-ai-hiring-agent.git
+   cd synapse-ai-hiring-agent
+   ```
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   # or use conda/venv as preferred
+   ```
+3. **Environment Variables**
+   - If using API keys (e.g., Mistral), create a `.env` file:
+     ```
+     MISTRAL_API_KEY=your_mistral_api_key
+     ```
+4. **Run the Streamlit App**
+   ```bash
+   streamlit run app.py
+   ```
+5. **Run the FastAPI Backend (optional)**
+   ```bash
+   uvicorn main:app --reload
+   ```
 
 ---
 
@@ -79,7 +59,6 @@ uvicorn main:app --reload
   "top_n": 7
 }
 ```
-
 **Output:**
 ```json
 {
@@ -114,12 +93,16 @@ uvicorn main:app --reload
 
 ---
 
-## 🤖 Approach
+## 🤖 Approach & Architecture
 
-- **Selenium + Bing:** For robust, CAPTCHA-free LinkedIn profile discovery.
-- **LLM (Mistral):** For recruiter-style search queries, candidate scoring, and personalized outreach.
-- **Modular Python:** Clean separation of scraping, scoring, messaging, and UI.
-- **Scalable:** Ready for batch jobs, multi-source, and cloud deployment.
+- **Hybrid, Scalable Design:**
+  - UI runs on Streamlit Cloud or HuggingFace Spaces; Selenium-powered backend can run on a dedicated VM or cloud server for robust browser automation.
+- **LLM-Powered Intelligence:**
+  - Mistral LLM generates recruiter-style queries, nuanced scoring, and personalized outreach.
+- **Modular Python:**
+  - Clean separation of scraping, scoring, messaging, and UI for easy extension and integration.
+- **Batch & Parallel Ready:**
+  - Designed for async, distributed processing and multi-source candidate discovery.
 
 ---
 

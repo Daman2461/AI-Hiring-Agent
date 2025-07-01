@@ -11,6 +11,6 @@ requests
 beautifulsoup4
 google-search-results
 fastapi
-uvicorn 
+uvicorn
 selenium
-webdriver-manager
+webdriver-manager 
