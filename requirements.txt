@@ -13,3 +13,4 @@ google-search-results
 fastapi
 uvicorn 
 selenium
+webdriver-manager
